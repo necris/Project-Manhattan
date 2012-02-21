@@ -10,8 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-	// private static final String TAG = MainActivity.class.getSimpleName();
-	// private DataTable dataTable;
+	private static final String TAG = MainActivity.class.getSimpleName();
 	private MediaPlayer mp;
 
 	private void initPlayer() {
@@ -41,6 +40,14 @@ public class MainActivity extends Activity {
 
 			}
 		});
+		
+		final Button highscores = (Button) findViewById(R.id.highscores_button);
+        highscores.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	Intent intent = new Intent(v.getContext(), HighscoresActivity.class);
+            	startActivity(intent);
+            }
+        });
 
 		final Button about = (Button) findViewById(R.id.about_button);
 		about.setOnClickListener(new View.OnClickListener() {

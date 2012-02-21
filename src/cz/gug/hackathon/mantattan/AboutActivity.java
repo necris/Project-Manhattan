@@ -1,7 +1,6 @@
 package cz.gug.hackathon.mantattan;
 
 import android.app.Activity;
-import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.Window;
 
@@ -12,7 +11,6 @@ public class AboutActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.about);
-        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
         
     }
 }
